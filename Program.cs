@@ -8,37 +8,74 @@ using System.Web;
 
 namespace p511_oop
 {
-
-    class Student
+    public class Rectangle
     {
-        public string firstName;
-        public string lastName;
-        public int age;
+        private double width;
+        private double height;
         
-
-        public Student(string firstName, string lastName, int age) 
-        { 
-          this.firstName = firstName;
-          this.lastName = lastName;    
-          this.age = age;
-        }
-        public void Introduce()
+        public Rectangle(double widht , double height)
         {
-            Console.WriteLine($"Привет, я {firstName} {lastName}, мне {age}");
+            Width = widht;
+            Height = height;
+        }
+        public double Width
+        {
+            get
+            {
+                return width;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    width = value;
+                }
+                else
+                {
+                    Console.WriteLine("Ошибка, какое-то значение меньше 0");
+                }
+            }
+        }
+        public double Height
+        {
+            get
+            { 
+                return height; 
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    height = value;
+                }
+                else
+                {
+                    Console.WriteLine("Ошибка, какое-то значение меньше 0");
+                }
+            }
+        }   
+
+
+        public double GetArea()
+        {
+            return width * height;
+        }
+        public double GetPerimeter()
+        {
+            return 2 * (width + height);
         }
     }
     internal class Program
     {
         static void Main(string[] args)
         {
-            Student studentOne = new Student("Пётр" ,"Петров" , 19);
-            Student studentTwo = new Student("Илья" ,"Сидоров" , 21);
-            Student studentThree = new Student("Иван" ,"Иванов" , 17);
-            studentOne.Introduce();
-            studentTwo.Introduce();
-            studentThree.Introduce();
-
-
+            Rectangle rect1 = new Rectangle(17.2 , 12.6);
+            Console.WriteLine(rect1.GetArea());
+            Console.WriteLine(rect1.GetPerimeter());
+            
+            Rectangle rect2 = new Rectangle(-11, 12);
+            Console.WriteLine($"Widt rect2 = {rect2.Width}");
+            Console.WriteLine($"Height rect2 = {rect2.Height}");
         }
     }
 }
