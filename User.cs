@@ -11,24 +11,38 @@ namespace p511_oop
         private string name;
         private int age;
 
-        public string getName()
+        public User(string name, int age)
         {
-            return name;
+            this.name = name;
+            this.age = age;
         }
 
-        public void setName(string value)
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+        public int Age
         { 
-             name = value;
+            get 
+            { 
+                return age; 
+            } 
+            set 
+            { 
+                age = value;
+            } 
         }
-        public int getAge()
+        public void Print()
         {
-            return age;
+            Console.WriteLine($"Имя {name}");
+            Console.WriteLine($"Возраст {age}");
         }
-
-        public void setAge(int value)
-        {
-            age = value;
-        }
-
     }
 }
