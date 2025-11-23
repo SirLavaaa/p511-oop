@@ -14,7 +14,7 @@ namespace p511_oop
             User user = new User();
             user.setName("Jhon");
             Console.WriteLine(user.getName());
-            user.setAge(18);
+            user.setAge(18); 
             Console.WriteLine(user.getAge());
         }
     }
