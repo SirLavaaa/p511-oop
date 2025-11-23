@@ -4,7 +4,6 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace p511_oop
 {
@@ -12,7 +11,11 @@ namespace p511_oop
     {
         static void Main(string[] args)
         {
-            
+            User user = new User();
+            user.setName("Jhon");
+            Console.WriteLine(user.getName());
+            user.setAge(18);
+            Console.WriteLine(user.getAge());
         }
     }
 }
