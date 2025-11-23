@@ -11,11 +11,14 @@ namespace p511_oop
     {
         static void Main(string[] args)
         {
-            User user = new User();
-            user.setName("Jhon");
-            Console.WriteLine(user.getName());
-            user.setAge(18); 
-            Console.WriteLine(user.getAge());
+            Student studentOne = new Student("Пётр" ,"Петров" , 19);
+            Student studentTwo = new Student("Илья" ,"Сидоров" , 21);
+            Student studentThree = new Student("Иван" ,"Иванов" , 17);
+            studentOne.Introduce();
+            studentTwo.Introduce();
+            studentThree.Introduce();
+
+
         }
     }
 }
