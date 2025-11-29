@@ -11,11 +11,8 @@ namespace p511_oop
     {
         static void Main(string[] args)
         {
-           User user = new User();
-            user.setName("Jhon");
-            user.setAge(18);
-            Console.WriteLine(user.getName());
-            Console.WriteLine(user.getAge());
+          Point point = new Point(187.76 , 154.98, 65.9);
+            point.PrintValues();
         }
     }
 }
