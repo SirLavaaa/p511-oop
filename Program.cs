@@ -11,11 +11,8 @@ namespace p511_oop
     {
         static void Main(string[] args)
         {
-           User user = new User();
-            user.setName("Jhon");
-            user.setAge(18);
-            Console.WriteLine(user.getName());
-            Console.WriteLine(user.getAge());
+         Book book = new Book("Stephan King", "IT", "N", "1987", 356 );
+            book.Print();
         }
     }
 }
