@@ -11,11 +11,10 @@ namespace p511_oop
     {
         static void Main(string[] args)
         {
-           User user = new User();
-            user.setName("Jhon");
-            user.setAge(18);
-            Console.WriteLine(user.getName());
-            Console.WriteLine(user.getAge());
+            Student student = new Student("Иванов Иван Иванович", "08.11.2006", "+7-777-777-77-77" , "Тюмень" , 
+                "Россия" , "Тюменский Индустриальный Университет" , "Тюмень, Россия");
+                student.PrintValues();
+            
         }
     }
 }
