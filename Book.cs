@@ -8,13 +8,13 @@ namespace p511_oop
 {
     internal class Book
     {
-        private string _author {  get; set; }
-        private string _title { get; set; }
-        private string _publisher { get; set; }
-        private string _year { get; set; }
-        private int _pageNumbers { get; set; }
+        public string _author {  get; set; }
+        public string _title { get; set; }
+        public string _publisher { get; set; }
+        public int _year { get; set; }
+        public int _pageNumbers { get; set; }
 
-        public Book(string author, string title, string publisher, string year, int pageNumbers)
+        public Book(string author, string title, string publisher, int year, int pageNumbers)
         {
             _author = author;
             _title = title;
