@@ -11,106 +11,40 @@ namespace p511_oop
 {
     internal class Student
     {
-        private string id;
-        private string birhtDate;
-        private string phoneNumber;
-        private string city;
-        private string country;
-        private string institution;
-        private string institutionLocation;
+        private string firstName { get; set; }
+        private string lastName { get; set; }
+        private int age { get; set; }
+        private string phoneNumber { get; set; }
+        private string city { get; set; }
+        private string country { get; set; }
+        private string institution { get; set; }
+        private string institutionLocation { get; set; }
 
-        public Student(string id, string birthDate, string phoneNumber, string city, string country, string institution, string institutionLocation)
-        { 
-            this.id = id;
-            this.birhtDate = birthDate;
+        public Student(string firstName, string lastName, int age, string phoneNumber, string city, string country, string institution, string institutionLocation)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
             this.phoneNumber = phoneNumber;
             this.city = city;
             this.country = country;
             this.institution = institution;
             this.institutionLocation = institutionLocation;
-        
+
         }
-        public string Id
-        {
-            get
-            {
-                return id;
-            }
-            set
-            {
-                id = value;
-            }
-        }
-        public string BirhtDate
-        {
-            get
-            {
-                return birhtDate;
-            }
-            set
-            {
-                birhtDate = value;
-            }
-        }
-        public string PhoneNumber
-        {
-            get
-            {
-                return phoneNumber;
-            }
-            set
-            {
-                phoneNumber = value;
-            }
-        }
-        public string City
-        {
-            get
-            {
-                return city;
-            }
-            set
-            {
-                city = value;
-            }
-        }
-        public string Country
-        {
-            get
-            {
-                return country;
-            }
-            set
-            {
-                country = value;
-            }
-        }
-              public string Institutiun
-        {
-            get
-            {
-                return institution;
-            }
-            set
-            {
-                institution = value;
-            }
-        }
-        public string InstitutionLocation
-        {
-            get
-            {
-                return institutionLocation;
-            }
-            set
-            {
-                institutionLocation = value;
-            }
-        }
+
         public void PrintValues()
         {
-            Console.WriteLine($"ФИО: {id}, Контактный номер: {phoneNumber}, Дата рождения: {birhtDate}, Учебное учереждение: " +
+            if (this.age > 0 && this.age < 150)
+                Console.WriteLine($"ФИО: {firstName} {lastName}, Контактный номер: {phoneNumber}, Возраст: {age}, Учебное учереждение: " +
                 $"{institution}, Локация учебного череждения: {institutionLocation}");
+            else
+                Console.WriteLine("Ошибка");
+             
+        }
+        public void FullName()
+        {
+            Console.WriteLine($"FullName {firstName} {lastName}");
         }
     }
 }
