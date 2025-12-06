@@ -11,11 +11,10 @@ namespace p511_oop
     {
         static void Main(string[] args)
         {
-           User user = new User();
-            user.setName("Jhon");
-            user.setAge(18);
-            Console.WriteLine(user.getName());
-            Console.WriteLine(user.getAge());
+            Employee employee = new Employee("Иван", "Иванов", "08.11.2005", "77777777777", "pochta1234@gmail.ru", "продавец", "Продаёт");
+            employee.PrintEmployee();
+            Plane plane = new Plane("Boing 700", "Boing", 2017, "пассажирский");
+            plane.PrintPlane();
         }
     }
 }
