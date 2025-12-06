@@ -11,11 +11,10 @@ namespace p511_oop
     {
         static void Main(string[] args)
         {
-           User user = new User();
-            user.setName("Jhon");
-            user.setAge(18);
-            Console.WriteLine(user.getName());
-            Console.WriteLine(user.getAge());
+            Dog dog = new Dog("Dog");
+            dog.Eat();
+            Cat cat = new Cat("Cat");
+
         }
     }
 }
