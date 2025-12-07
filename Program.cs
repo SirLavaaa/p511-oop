@@ -11,10 +11,10 @@ namespace p511_oop
     {
         static void Main(string[] args)
         {
-            Dog dog = new Dog("Dog");
-            dog.Eat();
-            Cat cat = new Cat("Cat");
-
+            Student student = new Student("Nick", 19,"987231793", "A@gmail.com", "p511");
+            student.PrintStudent();
+            Aspirant aspirant = new Aspirant("Nick", 19, "987231793", "A@gmail.com", "p511", "work");
+            aspirant.PrintStudent();
         }
     }
 }
