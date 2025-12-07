@@ -27,9 +27,9 @@ namespace p511_oop
             Console.WriteLine($"name: {_name}, age: {_age}, phone: {_phoneNumber}, email: {_email}, group: {_group}");
         }
     }
-    class Aspirant: Student
+    class Aspirant : Student
     {
-        private string _work {  get; set; }
+        private string _work { get; set; }
         public Aspirant(string name, int age, string phoneNumber, string email, string group, string work) : base(name, age, phoneNumber, email, group)
         {
             _work = work;
@@ -38,5 +38,5 @@ namespace p511_oop
         {
             Console.WriteLine($"name: {_name}, age: {_age}, phone: {_phoneNumber}, email: {_email}, group: {_group}, work: {_work}");
         }
-
+    }
 }
