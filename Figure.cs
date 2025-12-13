@@ -42,10 +42,10 @@ namespace p511_oop
             Console.WriteLine(_a * _b / 2);
         }
     }
-    class Trapecia : Figure
+    class Trapezoid : Figure
     {
         private double _h { get; set; }
-        public Trapecia(double a, double b, double h) : base(a, b) { }
+        public Trapezoid(double a, double b, double h) : base(a, b) { }
         public override void Area()
         {
             Console.WriteLine((_a + _b)/ 2 * _h);
