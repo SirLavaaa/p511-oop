@@ -8,18 +8,20 @@ namespace p511_oop
 {
     internal abstract class Figure
     {
-        protected double _a { get; set; }
-        protected double _b { get; set; }
-        protected Figure(double a, double b) 
+        protected Figure() 
         { 
-            _a = a;
-            _b = b;
         }
         public abstract void Area();
     }
     class Rectangle : Figure
     {
-        public Rectangle(double a, double b): base(a, b) { }
+        private double _a {  get; set; }
+        private double _b { get; set; }
+        public Rectangle(double a, double b)
+        { 
+          _a = a;
+          _b = b;
+        }
         public override void Area()
         {
             Console.WriteLine(_a * _b);
@@ -27,8 +29,11 @@ namespace p511_oop
     }
     class Circle: Figure
     {
-        private int _r { get; set; }
-        public Circle (double a, double b, double r) : base(a, b) { }
+        private double _r { get; set; }
+        public Circle (double r)
+        {
+            _r = r;
+        }
         public override void Area()
         {
             Console.WriteLine(_r * _r * 3.14);
@@ -36,7 +41,14 @@ namespace p511_oop
     }
     class Trinagle : Figure
     {
-        public Trinagle(double a, double b) : base(a, b) { }
+        private double _a { get; set; }
+        private double _b { get; set; }
+        public Trinagle(double a, double b)
+        {
+            _a = a;
+            _b = b;
+
+        }
         public override void Area()
         {
             Console.WriteLine(_a * _b / 2);
@@ -44,8 +56,16 @@ namespace p511_oop
     }
     class Trapezoid : Figure
     {
+        private double _a { get; set; }
+        private double _b { get; set; }
         private double _h { get; set; }
-        public Trapezoid(double a, double b, double h) : base(a, b) { }
+        public Trapezoid(double a, double b, double h)
+        { 
+            _a = a;
+            _b = b;
+            _h = h;
+
+        }
         public override void Area()
         {
             Console.WriteLine((_a + _b)/ 2 * _h);
