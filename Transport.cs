@@ -8,13 +8,13 @@ namespace p511_oop
 {
     internal abstract class Transport
     {
-        protected int _priseForS { get; set; }
+        protected int _priceForS { get; set; }
         protected int _capacity { get; set; }
         protected double _maxWeight { get; set; }
         protected double _speed { get; set; }
-        protected Transport(int priseForS, int capacity, int maxWeight, double speed)
+        protected Transport(int priceForS, int capacity, int maxWeight, double speed)
         {
-            _priseForS = priseForS;
+            _priceForS = priceForS;
             _capacity = capacity;
             _maxWeight = maxWeight;
             _speed = speed;
@@ -35,7 +35,7 @@ namespace p511_oop
         public override void Price(double s, int passengers, double cargo)
         {
             if (passengers <= _capacity && cargo <= _maxWeight)
-                Console.WriteLine((s + _priseForS) + (passengers * 100) + (cargo * 50));
+                Console.WriteLine((s + _priceForS) + (passengers * 100) + (cargo * 50));
             else
                Console.WriteLine("erorr");
         }
@@ -53,7 +53,7 @@ namespace p511_oop
         public override void Price(double s, int passengers, double cargo)
         {
             if (passengers <= _capacity && cargo <= _maxWeight)
-                Console.WriteLine((s + _priseForS) + (passengers * 100) + (cargo * 50));
+                Console.WriteLine((s + _priceForS) + (passengers * 100) + (cargo * 50));
             else
                 Console.WriteLine("erorr");
         }
@@ -71,7 +71,7 @@ namespace p511_oop
         public override void Price(double s, int passengers, double cargo)
         {
             if (passengers <= _capacity && cargo <= _maxWeight)
-                Console.WriteLine((s + _priseForS) + (passengers * 100) + (cargo * 50));
+                Console.WriteLine((s + _priceForS) + (passengers * 100) + (cargo * 50));
             else
                 Console.WriteLine("erorr");
         }
