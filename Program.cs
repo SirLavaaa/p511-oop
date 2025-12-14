@@ -11,11 +11,41 @@ namespace p511_oop
     {
         static void Main(string[] args)
         {
-           User user = new User();
-            user.setName("Jhon");
-            user.setAge(18);
-            Console.WriteLine(user.getName());
-            Console.WriteLine(user.getAge());
+            try
+            {
+                int age = -1;
+                if (age < 0)
+                {
+                    throw new ArgumentException("Возвраст не может быть отрицательным");
+                }
+                Console.WriteLine(age);
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch(ArgumentException e)
+            { 
+                Console.WriteLine("неизвестная ошибка");
+            }
+            finally
+            {
+                Console.WriteLine("Операция завершина");
+            }
+
+            try
+            {
+                int[] nums = new int[5] { 1, 2, 3, 4, 5 };
+                Console.WriteLine(nums[6]);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Операция завершена");
+            }
         }
     }
 }
