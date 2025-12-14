@@ -38,9 +38,13 @@ namespace p511_oop
                 int[] nums = new int[5] { 1, 2, 3, 4, 5 };
                 Console.WriteLine(nums[6]);
             }
+            catch(IndexOutOfRangeException ex)
+            {
+                Console.WriteLine("Выход за пределы диапозона");
+            }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Неизвестная ошибка");
             }
             finally
             {
