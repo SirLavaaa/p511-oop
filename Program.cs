@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace p511_oop
 {
@@ -11,11 +12,9 @@ namespace p511_oop
     {
         static void Main(string[] args)
         {
-           User user = new User();
-            user.setName("Jhon");
-            user.setAge(18);
-            Console.WriteLine(user.getName());
-            Console.WriteLine(user.getAge());
+            File.AppendAllText(@"C:\Users\Student\Desktop\hi.txt", "\nbye");
+            string text = File.ReadAllText(@"C:\Users\Student\Desktop\hi.txt");
+            Console.WriteLine(text);
         }
     }
 }
