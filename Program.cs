@@ -15,6 +15,12 @@ namespace p511_oop
         public string Username { get; set; }
         public string Email { get; set; }
     }
+    public class RegisterDto
+    {
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+    }
     internal class Program
     {
         private static readonly HttpClient _httpClient = new HttpClient()
@@ -33,6 +39,15 @@ namespace p511_oop
             {
                 Console.WriteLine(user.Username);
             }
+            var newUser = new RegisterDto()
+            {
+                Username = "Draco",
+                Email = "DDD1234@gmail.com",
+                Password = "11111111"
+            };
+            HttpResponseMessage response = await _httpClient.PostAsJsonAsync("/api/auth/register", newUser);
+            RegisterDto created = await response.Content.ReadFromJsonAsync<RegisterDto>();
+            Console.WriteLine($"{created.Username}{created.Email}");
         }
     }
 }
