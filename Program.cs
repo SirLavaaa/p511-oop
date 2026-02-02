@@ -11,8 +11,8 @@ namespace p511_oop
     {
         static void Main(string[] args)
         {
-           Phone phone = new Phone("Samsumg" , "S23" , 50000);
-            phone.Print();
+            Manager manager = new Manager("bob", 100000, 10000);
+            manager.CalculateMonthlySalary();
         }
     }
 }
